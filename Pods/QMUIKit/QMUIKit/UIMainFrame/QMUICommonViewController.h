@@ -31,6 +31,7 @@
  *  @see QMUIEmptyView
  */
 @interface QMUICommonViewController : UIViewController<QMUINavigationControllerDelegate>
+@property(nonatomic, strong) NSMutableArray *barBtnItemhandlersM;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
