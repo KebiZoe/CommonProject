@@ -28,17 +28,20 @@
 
 #pragma mark - tabbar图标和文字
 /**tabbar图标和文字*/
-#define FIRSTTAB_TITLE @"社区"
-#define SECONDTAB_TITLE @"扫一扫"
-#define THIRDTAB_TITLE @"我的"
+#define FIRSTTAB_TITLE @"tab1"
+#define SECONDTAB_TITLE @"tab2"
+#define THIRDTAB_TITLE @"tab3"
+#define FOURTHTAB_TITLE @"tab4"
 
-#define FIRSTTAB_ICON [UIImage imageNamed:@"tab_Community"]
-#define SECONDTAB_ICON [UIImage imageNamed:@"tab_QRCode"]
-#define THIRDTAB_ICON [UIImage imageNamed:@"tab_My"]
+#define FIRSTTAB_ICON [UIImage imageNamed:@"firstTabIcon"]
+#define SECONDTAB_ICON [UIImage imageNamed:@"secondTabIcon"]
+#define THIRDTAB_ICON [UIImage imageNamed:@"thirdTabIcon"]
+#define FOURTHTAB_ICON [UIImage imageNamed:@"fourthTabIcon"]
 
-#define FIRSTTAB_SELECTED_ICON [UIImage imageNamed:@"tab_Community_sel"]
-#define SECONDTAB_SELECTED_ICON [UIImage imageNamed:@"tab_QRCode_sel"]
-#define THIRDTAB_SELECTED_ICON [UIImage imageNamed:@"tab_My_sel"]
+#define FIRSTTAB_SELECTED_ICON [UIImage imageNamed:@"firstTabIcon_sel"]
+#define SECONDTAB_SELECTED_ICON [UIImage imageNamed:@"secondTabIcon_sel"]
+#define THIRDTAB_SELECTED_ICON [UIImage imageNamed:@"thirdTabIcon_sel"]
+#define FOURTHTAB_SELECTED_ICON [UIImage imageNamed:@"fourthTabIcon_sel"]
 
 #pragma mark - 颜色
 /**16进制颜色转换*/

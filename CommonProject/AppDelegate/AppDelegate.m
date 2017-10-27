@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "QMUIConfigurationTemplate.h"
+#import "YTKUrlArgumentsFilter.h"
+#import "TabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,11 +18,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    return YES;
+    self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    TabBarController *rootTabC=[[TabBarController alloc] init];
+    self.window.rootViewController=rootTabC;
+    // 启动 QMUI 的样式配置模板
+    [QMUIConfigurationTemplate setupConfigurationTemplate];
     
+    //配置YTKNetworkConfig
+    [self initYTKNetWork];
+    return YES;
 }
-
+/*配置YTKNetworkConfig*/
+-(void)initYTKNetWork{
+    
+    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    
+    YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
+    
+    YTKUrlArgumentsFilter *urlFilter = [YTKUrlArgumentsFilter filterWithArguments:@{@"version": appVersion}];
+    
+    [config addUrlFilter:urlFilter];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

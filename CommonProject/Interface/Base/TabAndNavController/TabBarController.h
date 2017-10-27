@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "QRCodeViewController.h"
-//#import "CommunityViewController.h"
-//#import "MyViewController.h"
+#import "FirstTabViewController.h"
+#import "SecondTabViewController.h"
+#import "ThirdTabViewController.h"
+#import "FourthTabViewController.h"
 @interface TabBarController : QMUITabBarViewController
 
-//@property (nonatomic) CommunityViewController *firstTabViewController;
-//@property (nonatomic) QRCodeViewController *secondTabViewController;
-//@property (nonatomic) MyViewController *thirdTabViewController;
+@property(nonatomic, strong) FirstTabViewController *firstTabVc;
+@property(nonatomic, strong) SecondTabViewController *secondTabVc;
+@property(nonatomic, strong) ThirdTabViewController *thirdTavVc;
+@property(nonatomic, strong) FourthTabViewController *fourthTabVc;
 
 @end

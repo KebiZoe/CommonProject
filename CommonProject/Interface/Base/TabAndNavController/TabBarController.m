@@ -17,25 +17,31 @@
 - (void)didInitialized{
     [super didInitialized];
     
-//    _firstTabViewController=[[CommunityViewController alloc] initWithStyle:UITableViewStylePlain];
-//    _firstTabViewController.tabBarItem.title=FIRSTTAB_TITLE;
-//    _firstTabViewController.tabBarItem.image=FIRSTTAB_ICON;
-//    _firstTabViewController.tabBarItem.selectedImage = FIRSTTAB_SELECTED_ICON;
-//    RootNavigationController *rootNavi1 =[[RootNavigationController alloc] initWithRootViewController:_firstTabViewController];
-//    
-//    _secondTabViewController=[[QRCodeViewController alloc] init];
-//    _secondTabViewController.tabBarItem.title=SECONDTAB_TITLE;
-//    _secondTabViewController.tabBarItem.image=SECONDTAB_ICON;
-//    _secondTabViewController.tabBarItem.selectedImage = SECONDTAB_SELECTED_ICON;
-//    RootNavigationController *rootNavi2 =[[RootNavigationController alloc] initWithRootViewController:_secondTabViewController];
-//    
-//    _thirdTabViewController=[[MyViewController alloc] init];
-//    _thirdTabViewController.tabBarItem.title=THIRDTAB_TITLE;
-//    _thirdTabViewController.tabBarItem.image=THIRDTAB_ICON;
-//    _thirdTabViewController.tabBarItem.selectedImage = THIRDTAB_SELECTED_ICON;
-//    RootNavigationController *rootNavi3 =[[RootNavigationController alloc] initWithRootViewController:_thirdTabViewController];
-//    
-//    self.viewControllers=@[rootNavi1,rootNavi2,rootNavi3];
+    _firstTabVc=[[FirstTabViewController alloc] init];
+    _firstTabVc.tabBarItem.title=FIRSTTAB_TITLE;
+    _firstTabVc.tabBarItem.image=FIRSTTAB_ICON;
+    _firstTabVc.tabBarItem.selectedImage = FIRSTTAB_SELECTED_ICON;
+    RootNavigationController *rootNavi1 =[[RootNavigationController alloc] initWithRootViewController:_firstTabVc];
+    
+    _secondTabVc=[[SecondTabViewController alloc] init];
+    _secondTabVc.tabBarItem.title=SECONDTAB_TITLE;
+    _secondTabVc.tabBarItem.image=SECONDTAB_ICON;
+    _secondTabVc.tabBarItem.selectedImage = SECONDTAB_SELECTED_ICON;
+    RootNavigationController *rootNavi2 =[[RootNavigationController alloc] initWithRootViewController:_secondTabVc];
+    
+    _thirdTavVc=[[ThirdTabViewController alloc] init];
+    _thirdTavVc.tabBarItem.title=THIRDTAB_TITLE;
+    _thirdTavVc.tabBarItem.image=THIRDTAB_ICON;
+    _thirdTavVc.tabBarItem.selectedImage = THIRDTAB_SELECTED_ICON;
+    RootNavigationController *rootNavi3 =[[RootNavigationController alloc] initWithRootViewController:_thirdTavVc];
+    
+    _fourthTabVc=[[FourthTabViewController alloc] init];
+    _fourthTabVc.tabBarItem.title=FOURTHTAB_TITLE;
+    _fourthTabVc.tabBarItem.image=FOURTHTAB_ICON;
+    _fourthTabVc.tabBarItem.selectedImage=FOURTHTAB_SELECTED_ICON;
+    RootNavigationController *rootNavi4 =[[RootNavigationController alloc] initWithRootViewController:_fourthTabVc];
+    
+    self.viewControllers=@[rootNavi1,rootNavi2,rootNavi3,rootNavi4];
 }
 
 - (void)viewDidLoad {
